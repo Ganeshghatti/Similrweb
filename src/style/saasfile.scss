@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin heading() {
+  //   font: 70px "Days One";
+  font: clamp(2rem, 4.5vw, 4.4rem) "Days one";
+}
+@mixin subheading() {
+  font: clamp(0.8rem, 1.3vw, 1.1rem) "Fjalla One";
+}
+@mixin text() {
+  font: clamp(0.6rem, 1.2vw, 1rem) "Fjalla One";
+}
+@mixin buttonone() {
+  background-color: $black;
+  color: $white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+@mixin buttontwo() {
+  background-color: $white;
+  color: $black;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+@mixin routelink() {
+  text-decoration: none;
+  color: black;
+  font: clamp(0.8rem, 1.2vw, 1rem) "Days One";
+}
+@mixin contactus() {
+  font: clamp(0.8rem, 1.2vw, 1rem) "Cousine";
+  cursor: pointer;
+}
+//flex property in sass

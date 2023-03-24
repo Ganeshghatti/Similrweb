@@ -1,0 +1,193 @@
+@import "saasfile";
+
+.landingpage {
+  background-color: $black;
+  color: $white;
+  width: 100vw;
+  height: 100vh;
+  .header {
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8vw;
+    height: 10vh;
+    div {
+      @include flex(row);
+      align-items: center;
+      gap: 1vw;
+      button {
+        @include buttonone();
+      }
+    }
+    div:nth-child(2) {
+      @include flex(row);
+      align-items: center;
+      gap: 5vw;
+      p {
+        font: 15px "Days One";
+        cursor: pointer;
+      }
+      button {
+        @include contactus();
+      }
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+}
+.landingpage {
+  section {
+    @include flex(row);
+    .left {
+      @include flex(column);
+      justify-content: space-around;
+      width: 50vw;
+      padding: 10vh 0 10vh 9vw;
+      align-items: flex-start;
+      p:nth-child(1) {
+        @include subheading();
+      }
+      p:nth-child(2) {
+        @include heading();
+      }
+      p:nth-child(3) {
+        @include text();
+        padding-right: 15vw;
+      }
+      div {
+        @include flex(row);
+        justify-content: center;
+        padding: 5vh 0 0 2vw;
+        gap: 5vw;
+      }
+      button {
+        @include buttontwo();
+        padding: 1.5vw 2vw;
+      }
+      .routelink,
+      pre {
+        @include routelink();
+      }
+      .mobileimg {
+        display: none;
+      }
+    }
+  }
+}
+.landingpage {
+  .right {
+    width: 60vw;
+    @include flex(row);
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.swipeup {
+  @include flex(column);
+  position: absolute;
+  width: 100vw;
+  align-items: center;
+  gap: 2vh;
+  p {
+    letter-spacing: 4px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .landingpage {
+    section {
+      .left {
+        padding: 5vh 0 5vh 4vw;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .landingpage {
+    .header {
+      padding: 0 inherit;
+      div {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+  .landingpage {
+    section {
+      .left,
+      .right {
+        width: 100vw;
+        align-items: center;
+        padding: 0;
+      }
+    }
+  }
+
+  .landingpage {
+    section {
+      flex-wrap: wrap;
+      .left {
+        margin: 10vh 0 0 0;
+        p:nth-child(1) {
+          font-size: 15px;
+        }
+        p:nth-child(2) {
+          padding: 1vh 0 5vh 0;
+          font-size: 45px;
+        }
+        p:nth-child(3) {
+          display: none;
+        }
+        div {
+            padding: 0;
+            gap: 15vw;
+            button {
+              padding: 1.8vw 8vw;
+            }
+          }
+        .mobileimg {
+          display: flex;
+          flex-direction: row;
+          width: 98vw;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          img {
+            width: 90%;
+            margin: auto;
+          }
+        }
+      }
+      .right {
+        .pcimg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen 
+and (min-device-width : 400px) 
+and (max-device-width : 520px) {
+    .swipeup {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+        .swipeup {
+        display: flex;
+        top: 73vh;
+        gap: 1vh;
+        p {
+          letter-spacing: 4px;
+        }
+      }
+}
