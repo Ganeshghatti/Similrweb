@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp ,faBars} from "@fortawesome/free-solid-svg-icons";
 import { Link, Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Signuppage from "./Signuppage";
+import {Signuppage} from './Signuppage'
 
 export default function Landingpage() {
   return (
@@ -25,13 +25,13 @@ export default function Landingpage() {
       </div>
       <section>
         <div className="left">
-          <p>Whatever is your abilities this is your community</p>
+          <p>Whatever your abilities this is your community</p>
           <p>TogetherWe</p>
           <p>We believe that everyone deserves to feel connected and supported, which is why we've created a space where you can share your ideas ,ask for advice , and learn from others</p>
           <div className="mobileimg" ><img src={illustrator} alt="img"/></div>
           <div>
-            <button><Link to="./Loginpage" className="routelink" ><pre> login </pre></Link></button> 
-            <button><Link to="./Signuppage" className="routelink">signup</Link></button>
+            <button><Link to="/Loginpage" className="routelink" ><pre> login </pre></Link></button> 
+            <button><Link to="/Signuppage" className="routelink">signup</Link></button>
           </div>
         </div>
         <div className="right">
@@ -41,6 +41,7 @@ export default function Landingpage() {
       <footer>
 
       </footer>
+      <div className="bluebg"></div>
       <div className="swipeup">
         <p>swipe up</p>
         <p><FontAwesomeIcon icon={faAngleUp} bounce /></p>

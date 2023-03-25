@@ -43,6 +43,7 @@ $black: rgb(0, 0, 0);
   text-decoration: none;
   color: black;
   font: clamp(0.8rem, 1.2vw, 1rem) "Days One";
+  background-color: white;
 }
 @mixin contactus() {
   font: clamp(0.8rem, 1.2vw, 1rem) "Cousine";
